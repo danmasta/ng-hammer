@@ -28,7 +28,7 @@ function capitalize(string){
 // Programatically create directives using the same method as angular.js default events
 angular.forEach('hold tap doubletap drag dragstart dragend dragup dragdown dragleft dragright swipe swipeup swipedown swipeleft swiperight transform transformstart transformend rotate pinch pinchin pinchout touch release'.split(' '), function(value, key){
   var directiveName = 'ng' + capitalize(value);
-  angular.module('ngHammer').directive(directiveName, function($parse){
+  angular.module('ngHammer').directive(directiveName, ['$parse', function($parse){
     return{
       compile: function($element, attr) {
         var fn = $parse(attr[directiveName]);
@@ -41,7 +41,7 @@ angular.forEach('hold tap doubletap drag dragstart dragend dragup dragdown dragl
         };
       }
     }
-  });
+  }]);
 });
 
 })(window, window.angular);
