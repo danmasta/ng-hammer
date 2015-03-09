@@ -11,7 +11,7 @@
  * @description
  *
  * # ngHammer
- * 
+ *
  * The ngHammer module provides angular directives for all touch events handled by hammer.js
  * The implementation is the same as default angular event handlers. Event object is available as $event.
  * http://eightmedia.github.io/hammer.js/
@@ -24,9 +24,9 @@ var ngHammer = angular.module('ngHammer', []);
 function capitalize(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-                                       
+
 // Programatically create directives using the same method as angular.js default events
-angular.forEach('hold tap doubletap drag dragstart dragend dragup dragdown dragleft dragright swipe swipeup swipedown swipeleft swiperight transform transformstart transformend rotate pinch pinchin pinchout touch release'.split(' '), function(value, key){
+angular.forEach('hold tap doubletap drag dragstart dragend dragup dragdown dragleft dragright swipe swipeup swipedown swipeleft swiperight transform transformstart transformend rotate pinch pinchin pinchout press pressup touch release'.split(' '), function(value, key){
   var directiveName = 'ng' + capitalize(value);
   angular.module('ngHammer').directive(directiveName, ['$parse', function($parse){
     return{
