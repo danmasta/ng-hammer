@@ -1,0 +1,19 @@
+{
+  "name": "ng-hammer",
+  "version": "1.0.0",
+  "description": "Angular directives for all touch events handled by hammer.js",
+  "main": "nghammer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flasd/ngHammer.git"
+  },
+  "author": "Marcel <https://github.com/flasd>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flasd/ngHammer/issues"
+  },
+  "homepage": "https://github.com/flasd/ngHammer#readme"
+}
